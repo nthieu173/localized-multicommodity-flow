@@ -42,7 +42,9 @@ Most of the variables are the same as in the relaxation section, with some diffe
 - \\(f^l_{ij,k}\\) is the flow on edge \\((i, j)\\) for commodity \\(k\\) at iteration \\(l\\).
 - \\(r^l_{ij}\\) is the unused capacity on edge \\((i, j)\\) at iteration \\(l\\).
 
-We now direct our attention toward \\(\beta\\), which is the step size. The paper has proven that to guarantee convergence, it must be constrained to the following:
+This algorithm follows much of the analysis on our previous section. After calculating the potential difference, we update the flow on each edge by some fraction of the potential difference, governed by the step size.
+
+We now direct our attention toward \\(\beta\\), which is the step size. To guarantee convergence, it must be constrained by the following condition:
 \\[
     \beta \leq \frac{2\sigma}{\lambda_{\max}}
 \\]
@@ -51,7 +53,7 @@ where \\(\sigma \in (0, 1)\\) is a constant and \\(\lambda_{\max}\\) is the larg
 
 However, for for graphs with very large \\(\lambda_{\max}\\), the step size \\(\beta\\) then can be constrained to be very small, which would lead to slow convergence.
 
-Thus, in practice we would want to use a larger step size initially and then decrease it as the algorithm progresses. The author hence suggests an inexact line search method which will have an adaptive step size, presented below. 
+Thus, in practice we would want to use a larger step size when the potential difference is high and then decrease it as the algorithm progresses and the potential difference of each edge approaches zero. The author hence suggests an inexact line search method which will have an adaptive step size, presented below. 
 
 ## The inexact line search method
 
