@@ -45,8 +45,8 @@ G.add_node("1", partition=1)
 G.add_node("3", partition=1)
 G.add_node("2", partition=2)
 G.add_node("4", partition=2)
-G.add_node("r_b", demand=-2, partition=3)
-G.add_node("r_r", demand=-3, partition=3)
+G.add_node("t_b", demand=-2, partition=3)
+G.add_node("t_r", demand=-3, partition=3)
 
 G.add_edge("s_b", "1", capacity=2, weight=0)
 G.add_edge("s_b", "3", capacity=2, weight=0)
@@ -58,10 +58,10 @@ G.add_edge("1", "4", capacity=3, weight=3)
 G.add_edge("3", "2", capacity=3, weight=3)
 G.add_edge("3", "4", capacity=3, weight=1)
 
-G.add_edge("2", "r_b", capacity=2, weight=0)
-G.add_edge("2", "r_r", capacity=2, weight=0)
-G.add_edge("4", "r_b", capacity=3, weight=0)
-G.add_edge("4", "r_r", capacity=3, weight=0)
+G.add_edge("2", "t_b", capacity=2, weight=0)
+G.add_edge("2", "t_r", capacity=2, weight=0)
+G.add_edge("4", "t_b", capacity=3, weight=0)
+G.add_edge("4", "t_r", capacity=3, weight=0)
 
 nx.draw(
     G,

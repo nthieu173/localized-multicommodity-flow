@@ -1,6 +1,6 @@
 # Introduction
 
-The multi-commodity flow problem is a network flow problem with multiple commodities. Given a directed graph and a set of commodities, the goal is to find a flow for each edge and each commodity such that the flow satisfies the capacity constraints of the edges and the conservation of flow at each node.
+The multi-commodity flow problem is a network flow problem with multiple commodities. Given a directed graph and a set of commodities, the goal is to find a flow for each edge and each commodity such that the flow satisfies the capacity constraints of the edges and the conservation of flow at each node. Even though the demands are different, the capacities of the edges are often shared between the commodities, which poses a challenge in finding a feasible solution.
 
 ![Multi-commodity flow problem example](./images/multi_commodity_flow_example.png)
 
