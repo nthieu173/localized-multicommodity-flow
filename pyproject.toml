@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=75.3.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "localized-multicommodity-flow"
+version = "0.1.0"
+dependencies = ["numpy", "scipy"]
+requires-python = ">=3.11"
+authors = [{ name = "Hieu Nguyen", email = "nthieu173@gmail.com" }]
+maintainers = [{ name = "Hieu Nguyen", email = "nthieu173@gmail.com" }]
+description = "Implement and showcase a Localized Method for the Multi-commodity Flow Problem by Pengfei Liu from https://arxiv.org/abs/2108.07549"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["game", "engine"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python",
+]
+
+[project.urls]
+Repository = "https://github.com/nthieu173/localized-multicommodity-flow"
+"Bug Tracker" = "https://github.com/nthieu173/localized-multicommodity-flow/issues"
+
+[tool.pyright]
+typeCheckingMode = "strict"
