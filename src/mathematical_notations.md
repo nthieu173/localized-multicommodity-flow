@@ -19,7 +19,7 @@ Much like the single-commodity flow problem, the multi-commodity flow problem ca
     \\[
     \hat{\Delta}_{ik} = 
     \begin{cases} 
-    0, & \text{if } i \in V \setminus \{s_k, t_k\} \\\\
+    0, & \text{if } i \in V \setminus \\{s_k, t_k\\} \\\\
     d_k, & \text{if } i = s_k \\\\
     -d_k, & \text{if } i = t_k.
     \end{cases}
