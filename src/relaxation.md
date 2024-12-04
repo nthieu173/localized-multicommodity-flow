@@ -1,6 +1,6 @@
 # Relaxation
 
-The main idea of the algorithm devised by [Liu et al](https://arxiv.org/abs/2108.07549) is to relax both the conservation of flow constraint on the vertices and the capacity constraint on the edges. This relaxation is done by introducing a **pseudo-flow**.
+The main idea of the algorithm devised by [Liu et al](https://doi.org/10.48550/arXiv.2108.07549) is to relax both the conservation of flow constraint on the vertices and the capacity constraint on the edges. This relaxation is done by introducing a **pseudo-flow**.
 
 The **pseudo-flow**, defined as \\( \mathcal{f}: K \times E \to \mathbb{R}^+ \\), is a function that maps each commodity \\( k \in \mathcal{K} \\) and edge \\( (i, j) \in E \\) to a non-negative real number, which is just the same as that of a *real* flow. The main difference is that the pseudo-flow does not need to satisfy the constraints noted above.
 

@@ -121,3 +121,21 @@ Thus, in practice we would want to use a larger step size when the potential dif
     \\[
     \phi_{ij,k} = h_{ik} - h_{jk} - \psi_{ij}.
     \\]
+
+### Remarks
+
+Looking at step 2.4, we can see that \\(\omega^l\\) is created by multiplying the step size \\(\beta^l\\) by the gradient of the potential difference. This makes it a gradient projection method and is known to converge to a local minimum.
+
+We note four hyperparameters in the inexact line search method:
+- \\(\mu = 0.5\\) is the lower bound for \\(\omega^l\\). When \\(\omega^l\\) is below this value, the step size is increased.
+- \\(\nu = 0.9\\) is the upper bound for \\(\omega^l\\). When \\(\omega^l\\) is above this value, the step size is decreased.
+- 0.8 is the factor by which the step size is decreased when \\(\omega^l\\) is above \\(\nu\\).
+- 1.5 is the factor by which the step size is increased when \\(\omega^l\\) is below \\(\mu\\).
+
+These factors were chosen according to this paper: [Improvements of Some Projection Methods for Monotone Nonlinear Variational Inequalities](https://doi.org/10.1023/A:1013096613105) by He, B.S., Liao, L.Z.. The author seems to have made two slight changes compared to the original paper:
+- \\(\mu\\) was increased from 0.4 to 0.5.
+- The decrease factor was changed from 2/3 to 0.8.
+
+It is unclear why these changes were made, but they might have been made according to empirical results from the author's experiments.
+
+There is also the inclusion of the stopping criterion, which is not detailed in the paper. However, from the relaxation, we can devise a reasonable stopping criteria: when the **stable pseudo-flow** is reached, or in other word when \\(\psi_{ij}\\) is close to zero for all \\((i, j) \in E\\).

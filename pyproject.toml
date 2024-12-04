@@ -10,7 +10,7 @@ dependencies = ["numpy", "matplotlib", "networkx", "scipy"]
 requires-python = ">=3.11"
 authors = [{ name = "Hieu Nguyen", email = "nthieu173@gmail.com" }]
 maintainers = [{ name = "Hieu Nguyen", email = "nthieu173@gmail.com" }]
-description = "Implement and showcase a Localized Method for the Multi-commodity Flow Problem by Pengfei Liu from https://arxiv.org/abs/2108.07549"
+description = "Implement and showcase a Localized Method for the Multi-commodity Flow Problem by Pengfei Liu from https://doi.org/10.48550/arXiv.2108.07549"
 readme = "README.md"
 license = { file = "LICENSE" }
 keywords = ["game", "engine"]
