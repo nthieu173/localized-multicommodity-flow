@@ -139,3 +139,9 @@ These factors were chosen according to this paper: [Improvements of Some Project
 It is unclear why these changes were made, but they might have been made according to empirical results from the author's experiments.
 
 There is also the inclusion of the stopping criterion, which is not detailed in the paper. However, from the relaxation, we can devise a reasonable stopping criteria: when the **stable pseudo-flow** is reached, or in other word when \\(\psi_{ij}\\) is close to zero for all \\((i, j) \in E\\).
+
+## Implementation
+
+The algorithm is implemented in Python and can be found in the [scripts folder of the repository](https://github.com/nthieu173/localized-multicommodity-flow/blob/main/src/scripts/localized_multicommodity_flow.py).
+
+![Algorithm implementation example](./images/localized_multicommodity_flow.gif)
